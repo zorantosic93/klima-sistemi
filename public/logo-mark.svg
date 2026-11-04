@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="green" x1="30" y1="30" x2="130" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#08743b"/><stop offset="1" stop-color="#003b28"/></linearGradient>
+    <linearGradient id="orange" x1="120" y1="10" x2="175" y2="170" gradientUnits="userSpaceOnUse"><stop stop-color="#ff8628"/><stop offset="1" stop-color="#f15b16"/></linearGradient>
+  </defs>
+  <path d="M73 13C126-10 185 23 195 83C179 45 154 29 119 31C109 15 91 10 73 13Z" fill="url(#orange)"/>
+  <path d="M5 91C10 45 42 17 78 17C103 17 117 34 118 63C105 37 83 29 57 42C31 54 16 72 5 91Z" fill="url(#green)"/>
+  <path d="M5 109C13 155 49 186 89 184C72 167 64 143 65 113C76 149 87 169 111 177C122 181 129 182 137 181C85 210 18 177 5 109Z" fill="url(#green)"/>
+  <path d="M100 88C81 124 85 156 112 172C145 191 181 165 194 123C175 152 151 163 130 151C109 139 101 116 100 88Z" fill="url(#orange)"/>
+  <g stroke="url(#green)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><path d="M76 49V143M59 62L76 76L94 62M59 132L76 118M29 78L76 105L31 131M32 66L38 83L22 88M23 116L39 120L34 138"/></g>
+  <path d="M122 66C140 63 155 80 155 100C155 120 141 135 122 137C110 138 106 127 106 111C106 94 111 76 122 66Z" fill="url(#orange)"/>
+  <g stroke="url(#orange)" stroke-width="11" stroke-linecap="round"><path d="M131 42L128 55M163 56L153 66M180 92H166M168 125L156 118M139 151L135 139"/></g>
+</svg>
