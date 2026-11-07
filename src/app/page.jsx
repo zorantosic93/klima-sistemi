@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import {
   ArrowUpRight,
   ArrowRight,
@@ -18,19 +19,20 @@ import {
   House,
   Building2,
   Download,
+  Instagram,
+  Phone,
 } from "lucide-react";
 
 function Logo() {
   return (
     <a href="#" className="logo" aria-label="Klima Sistemi početna">
-      <span className="logo-mark">
-        <img src="/logo-mark.svg" alt="" width="72" height="72" />
-      </span>
-      <span className="logo-wordmark">
-        KLIMA
-        <br />
-        SISTEMI
-      </span>
+      <Image
+        src="/klima-sistemi-logo.png"
+        alt="Klima Sistemi"
+        width={360}
+        height={132}
+        priority
+      />
     </a>
   );
 }
@@ -75,7 +77,7 @@ const faqs = [
   ],
   [
     "Kako mogu zatražiti ponudu?",
-    "U kontakt sekciji odaberite uslugu i opišite prostor. Možete pripremiti i preuzeti upit, a direktno slanje bit će dostupno kada se dodaju kontakt podaci firme.",
+    "Pozovite nas na 064 449 4547 ili u kontakt sekciji odaberite uslugu i opišite prostor. Obrazac priprema datoteku s vašim upitom koju možete sačuvati na uređaju.",
   ],
 ];
 export default function Home() {
@@ -150,14 +152,15 @@ export default function Home() {
               ["Zašto mi", "zasto-mi"],
               ["Kako radimo", "proces"],
               ["Česta pitanja", "pitanja"],
+              ["Kontakt", "kontakt"],
             ].map(([label, id]) => (
               <a key={id} href={"#" + id} onClick={() => setMenu(false)}>
                 {label}
               </a>
             ))}
           </nav>
-          <a href="#kontakt" className="nav-cta">
-            Zatražite ponudu <ArrowUpRight size={17} />
+          <a href="tel:+387644494547" className="nav-cta" aria-label="Pozovite Klima Sistemi na 064 449 4547">
+            <Phone size={16} /> <span>064 449 4547</span>
           </a>
           <button
             className="menu-btn"
@@ -498,9 +501,16 @@ export default function Home() {
             <div className="contact-status">
               <span /> Područje rada: Sarajevo i okolina
             </div>
-            <p className="contact-explain">Telefon i e-mail uskoro.</p>
+            <a className="contact-phone" href="tel:+387644494547">
+              <span className="contact-phone-icon"><Phone size={22} /></span>
+              <span>
+                <small>Pozovite nas</small>
+                064 449 4547
+              </span>
+              <ArrowUpRight size={20} />
+            </a>
             <p className="contact-explain">
-              Do tada možete pripremiti i preuzeti svoj upit.
+              Ili pripremite i preuzmite svoj upit.
               <br />
               Ovaj obrazac još ne šalje poruke.
             </p>
@@ -561,7 +571,22 @@ export default function Home() {
       <footer>
         <Logo />
         <span>Udobnost u svakoj sezoni.</span>
-        <a href="#">Nazad na vrh ↑</a>
+        <div className="footer-actions">
+          <a href="tel:+387644494547" className="footer-phone">
+            <Phone size={16} /> 064 449 4547
+          </a>
+          <a
+            className="instagram-placeholder"
+            href="https://www.instagram.com/klimasistemi/"
+            target="_blank"
+            rel="noreferrer"
+            title="Klima Sistemi na Instagramu"
+            aria-label="Otvorite Klima Sistemi Instagram profil"
+          >
+            <Instagram size={19} />
+          </a>
+          <a href="#">Nazad na vrh ↑</a>
+        </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Klima Sistemi</span>
           <span>Hladno ljeto, topla zima.</span>

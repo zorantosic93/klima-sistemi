@@ -9,7 +9,7 @@ export const metadata = {
     locale: "bs_BA",
     type: "website",
   },
-  icons: { icon: "/logo-mark.svg" },
+  icons: { icon: "/logo-mark.svg", apple: "/logo-mark.svg" },
 };
 export const viewport = { themeColor: "#033629" };
 export default function RootLayout({ children }) {
